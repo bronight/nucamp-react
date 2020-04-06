@@ -26,10 +26,13 @@ class CommentForm extends Component{
 
     render(){
         return(
-            <Button onClick={this.toggleModal} outline>
-                <span className="fa fa-pencil" /> Submit Comment
+            <React.Fragment>
+                <Button onClick={this.toggleModal} outline>
+                    <span className="fa fa-pencil" /> Submit Comment
+                    
+                </Button>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
-                <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
+                    <ModalHeader toggle={this.toggleModal}>Submit Comment</ModalHeader>
                     <ModalBody>
                         <LocalForm onSubmit={values => this.handleSubmit(values)}>
                             <Row className="form-group">
@@ -85,7 +88,7 @@ class CommentForm extends Component{
                         </LocalForm>
                     </ModalBody>
                 </Modal>
-            </Button>
+            </React.Fragment>
         );
     }
 }

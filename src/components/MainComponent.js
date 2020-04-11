@@ -21,13 +21,6 @@ const mapStateToProps = state => {
     };
 };
 
-const CampsiteWithId = ({match}) => {
-    return (
-        <CampsiteInfo campsite={this.props.campsites.filter(campsite => campsite.id === +match.params.campsiteId)[0]} 
-          comments={this.props.comments.filter(comment => comment.campsiteId === +match.params.campsiteId)} />
-    );
-};
-
 const mapDispatchToProps = {
     postComment: (campsiteId, rating, author, text) => (postComment(campsiteId, rating, author, text)),
     fetchCampsites: () => (fetchCampsites()),

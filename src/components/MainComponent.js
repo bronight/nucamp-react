@@ -41,7 +41,6 @@ class Main extends Component {
     }
 
     render() {
-        console.log("Main", this.props);
         const HomePage = () => {
             return (
                 <Home
